@@ -21,5 +21,5 @@ if __name__ == "__main__":
     import uvicorn
 
     uvicorn.run(
-        "newsaggregatorservice.__main__:app", host="0.0.0.0", port=5007, reload=True
+        "aggregatorservice.__main__:app", host="0.0.0.0", port=5007, reload=True
     )
