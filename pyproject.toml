@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "newsaggregatorservice"
+name = "aggregatorservice"
 version = "0.1.0"
 description = "Deliver news to Atomic FE"
 authors = ["Your Name <you@example.com>"]

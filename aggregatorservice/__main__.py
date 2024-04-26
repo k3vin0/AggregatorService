@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from newsaggregatorservice.router.news import app as news_router
-from newsaggregatorservice.router.weather import app as weather_router
+from aggregatorservice.router.news import app as news_router
+from aggregatorservice.router.weather import app as weather_router
 
 app = FastAPI()
 

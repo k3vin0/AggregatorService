@@ -1,12 +1,10 @@
-from enum import Enum
 from http.client import HTTPException
 from fastapi import APIRouter
-from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 import httpx
 import os
 
-from newsaggregatorservice.models.types.types import NewsCategories
+from aggregatorservice.models.types.types import NewsCategories
 
 load_dotenv()
 
