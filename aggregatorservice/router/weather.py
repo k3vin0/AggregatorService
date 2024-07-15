@@ -9,11 +9,11 @@ load_dotenv()
 app = APIRouter()
 
 api_key = os.getenv("WEATHER_API_KEY")
-weather_base_url = os.getenv("WEATHER_BASE_URL_HOURLY")
+weather_base_url = os.getenv("WEATHER_BASE_URL_DAILY")
 
 
 @app.get("/local")
-async def get_local_weather(lat: float, lon: float, api_key: str):
+async def get_local_weather(lat: float, lon: float):
     try:
         async with httpx.AsyncClient() as client:
             response = await client.get(
@@ -24,7 +24,6 @@ async def get_local_weather(lat: float, lon: float, api_key: str):
                     "appid": api_key,
                 },
             )
-            response.raise_for_status()  # Raises exception for 4XX/5XX responses
             data = response.json()
             return data  # You might want to parse this data further depending on your needs
     except httpx.HTTPStatusError as e:
